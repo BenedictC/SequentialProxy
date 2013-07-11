@@ -10,14 +10,14 @@ The proxy works by intercepting method invocations and executing them on a synch
 
 Pros & cons
 -----------
-+ Little code required to create, thus easy to use as a drop in fix.
++ Pro: Little code required to create, thus easy to use as a drop in fix.
 
-+ Easy to use interface.
++ Pro: Easy to use interface.
 
-- Doesn't guarantee thread safety. If a reference to the object is held by an object other than the proxy then the this 
+- Con: Doesn't guarantee thread safety. If a reference to the object is held by an object other than the proxy then the this 
   object can still perform concurrent access.
 
-- Message ordering issues can still occur. For example, thread A makes 2 sequential calls, but a call by thread B is  
+- Con: Message ordering issues can still occur. For example, thread A makes 2 sequential calls, but a call by thread B is  
   performed between the 2 calls from thread A.
 
-- Slow compared to a specialised solutions.
+- Con: Slow compared to a specialised solutions.
